@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Empresarial Premium</title>
+  <script src="{% static 'js/v_empre.js' %}" defer></script>
+  <link rel="stylesheet" href="{% static 'css/vistasEmpresario/vistaEmpresario.css' %}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="#" class="logo-nav">
+      <img src="{% static 'img/home/logo.png' %}" alt="Popayán Tour Logo">
+  </a>
+  <div class="nav-actions">
+      <div class="nav-icons">
+          <div class="user-menu">
+              <i class="fas fa-user" id="userIcon" aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown" id="dropdownMenu">
+                  <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+              </div>
+          </div>
+      </div>
+      <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+      </div>
+  </div>
+</nav>
+
+
+<div id="logoutModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" data-close="logout">&times;</span>
+    <h3>¿Cerrar Sesión?</h3>
+    <p>¿Estás seguro de que quieres cerrar tu sesión?</p>
+    <div class="modal-actions">
+      <button id="cancelLogout" class="btn btn-secondary">Cancelar</button>
+
+      <!-- 🔐 Cerrar sesión por POST con CSRF -->
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-delete">Sí, salir</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <div class="bg-animation"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Panel Empresarial</h1>
+      <p>Bienvenido <span>{{ usuario.nombre_completo }}</span>, aquí puedes gestionar fácilmente tus establecimientos y fortalecer tu conexión con visitantes y turistas.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Mis Establecimientos</h2>
+      <a href="{% url 'agregar_hotel' %}" class="add-btn">
+        <i class="fas fa-plus"></i>
+        Agregar Negocio 
+      </a>
+    </div>
+  </div>
+
+{% if hoteles %}
+  <div class="hoteles-grid">
+    {% for hotel in hoteles %}
+      <div class="hotel-card">
+        <div class="hotel-image">
+          {% if hotel.imagen %}
+            <img src="{{ hotel.imagen.url }}" alt="{{ hotel.nombre }}">
+          {% else %}
+            <img src="{% static 'img/default-hotel.jpg' %}" alt="Sin imagen">
+          {% endif %}
+        </div>
+        <div class="hotel-info">
+          <h3>{{ hotel.nombre }}</h3>
+          <p>{{ hotel.descripcion|truncatewords:15 }}</p>
+          <div class="hotel-actions">
+            <a href="{{ hotel.url_mas_info }}" target="_blank" class="btn btn-link">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+            <a href="{% url 'editar_hotel' hotel.id %}" class="btn btn-edit">
+              <i class="fas fa-edit"></i>
+            </a>
+            <form action="{% url 'eliminar_hotel' hotel.id %}" method="post" style="display:inline;">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-delete" onclick="return confirm('¿Eliminar {{ hotel.nombre }}?')">
+                <i class="fas fa-trash"></i>
+              </button>
+            </form> 
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="no-hoteles">No tienes hoteles registrados aún.</p>
+{% endif %}
+
+  <!-- Modal de confirmación para eliminar -->
+  <div id="deleteModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Confirmar Eliminación</h3>
+      <p>¿Estás seguro de que deseas eliminar <span id="hotelName"></span>?</p>
+      <p><strong>Esta acción no se puede deshacer.</strong></p>
+      <div class="modal-actions">
+        <button id="cancelDelete" class="btn btn-secondary">Cancelar</button>
+        <form id="deleteForm" method="post" style="display: inline;">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-delete">Sí, Eliminar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

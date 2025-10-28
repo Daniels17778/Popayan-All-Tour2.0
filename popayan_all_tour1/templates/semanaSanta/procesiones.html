@@ -1,0 +1,1297 @@
+
+{% load static %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popayán All Tour</title>
+
+    <!-- Fuentes e íconos -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="{% static 'css/semanaSanta/procesiones.css' %}">
+     <script src="{% static 'js/semanaSanta/procesiones.js' %}"></script>
+    
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../static/img/home/imagen_2025-03-16_185953883-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+            <a href="#" class="logo-nav">
+                <img src="{% static 'img/img_se/logo.png' %}" alt="Popayán Tour Logo">
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'semanaSanta' %}">Semana santa</a></li>
+                <li><a href="{% url 'hoteles_publicos' %}">Sitios de interés</a></li>
+                <li><a href="{% url 'historia_1537' %}">Historia</a></li>
+                <li><a href="{% url 'entretenimiento' %}">Entretenimiento</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-icons">
+
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+    <!--cuerpo-->
+   <!-- El contenido inicia después del nav existente -->
+    
+    <!-- Header -->
+    <section class="header">
+        <div class="container">
+            <div class="header-content">
+                <h2  class="day-title">Procesiones </h2>
+                 <div class="dis">
+                <p class="header-subtitle">
+Descubre la grandeza de la Semana Santa payanesa, una tradición única que combina fe, historia y cultura. Vive cada día de esta celebración sagrada conociendo en detalle los pasos que procesionan, sus significados y la riqueza artística que encierran. Además, encuentra en nuestras guías todo lo que necesitas para planificar tu recorrido, apreciar los mejores momentos de cada procesión y comprender la profunda espiritualidad que envuelve a la ciudad durante esta conmemoración.                </p>
+                <img src="{% static 'img/img_se/quince.jpeg' %}" alt="Popayán Tour Logo" class="img-p" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="container">
+        <nav class="days-nav">
+            <a href="#martes" class="day-tab active" onclick="showDay('martes', this)">Martes Santo</a>
+            <a href="#miercoles" class="day-tab" onclick="showDay('miercoles', this)">Miércoles Santo</a>
+            <a href="#jueves" class="day-tab" onclick="showDay('jueves', this)">Jueves Santo</a>
+            <a href="#viernes" class="day-tab" onclick="showDay('viernes', this)">Viernes Santo</a>
+            <a href="#sabado" class="day-tab" onclick="showDay('sabado', this)">Sábado Santo</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- MARTES SANTO -->
+            <section id="martes" class="day-section active">
+                
+                <!-- Day Header -->
+                <div class="day-header">
+                    <h2 class="day-title">Martes Santo</h2>
+                    <p class="day-subtitle">Procesión del Señor del Perdón y María Santísima de los Dolores</p>
+                    <div class="day-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            8:00 PM - 11:30 PM
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            6 Pasos Procesionales
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                            104 Cargueros
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day Description -->
+                <div class="day-description">
+                    <h3 class="section-title">Sobre esta Procesión</h3>
+                    <p>
+                        El Martes Santo marca el inicio oficial de las grandes procesiones nocturnas de la Semana Santa payanesa. Esta jornada está dedicada a la meditación sobre el perdón divino y el dolor maternal de María. La procesión sale de la Iglesia de San Francisco y recorre las principales calles del centro histórico, creando un ambiente de profunda espiritualidad.
+                    </p>
+                    <p>
+                        Los cinco pasos que conforman esta procesión narran episodios fundamentales de la Pasión: desde la oración en el huerto hasta el encuentro de Jesús con su Madre Dolorosa. Cada imagen, tallada por maestros de diferentes épocas, representa siglos de devoción y arte religioso colonial.
+                    </p>
+                    <p>
+                        Esta procesión se caracteriza por su solemnidad y por ser la más íntima de toda la semana, donde la participación ciudadana es masiva pero respetuosa, creando un silencio sagrado que envuelve las calles empedradas de la ciudad blanca.
+                    </p>
+                </div>
+
+                <!-- Pasos del Martes Santo -->
+                <div class="pasos-container">
+                    <h3 class="section-title">Pasos Procesionales del Martes Santo</h3>
+                    <div class="pasos-grid">
+                        
+                        <div class="paso-card">
+                            <div class="paso-header">
+                                <alt="La Oración en el Huerto" >
+                                    <img src="{% static 'img/img_se/pasos_1.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">
+                                <div class="paso-number">1</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Magdalena</h4>
+                                <p class="paso-description">
+                                   Representa a María Magdalena, seguidora fiel de Jesús. La imagen la muestra en actitud de recogimiento, con expresión de dolor y penitencia. Es una talla colonial de gran belleza, que resalta la devoción femenina en la Pasión.
+                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Origen: Siglo XVIII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">12 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">300 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+ <img src="{% static 'img/img_se/pasos_2.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">             
+                    <div class="paso-number">2</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Verónica</h4>
+                                <p class="paso-description">
+                               Paso que representa el momento en que Verónica limpia el rostro de Cristo camino al Calvario. La tradición asegura que la tela conservó la Santa Faz. La imagen transmite ternura y valentía femenina frente al sufrimiento.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">12 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">350 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera tallada y tela natural</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+ <img src="{% static 'img/img_se/pasos_3.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                <div class="paso-number">3</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Señor del Huerto</h4>
+                                <p class="paso-description">
+Evoca a Cristo en oración en el Monte de los Olivos, momento previo a la Pasión. Su expresión refleja entrega y resignación. Es una de las tallas más antiguas de la procesión, símbolo de recogimiento espiritual.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVII, Escuela Quiteña</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">16 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">600 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Columna:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+ <img src="{% static 'img/img_se/pasos_4.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                <div class="paso-number">4</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Prendimiento</h4>
+                                <p class="paso-description">
+Escena que muestra la captura de Jesús por los soldados romanos en presencia de Judas Iscariote. Destaca por la fuerza dramática de sus figuras y el realismo en los gestos.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">20 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">700 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+ <img src="{% static 'img/img_se/pasos_5.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                  <div class="paso-number">5</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Señor Caído</h4>
+                                <p class="paso-description">
+Figura de Cristo desplomado bajo el peso de la cruz, con rostro de sufrimiento y compasión. Es uno de los pasos más venerados del Martes Santo y despierta profunda devoción en los fieles.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">20 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">650 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paso-card">
+                            <div class="paso-header">
+ <img src="{% static 'img/img_se/pasos_6.jpeg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                  <div class="paso-number">6</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Virgen de los Dolores</h4>
+                                <p class="paso-description">
+Imagen titular de la procesión, muestra a la Virgen María en profundo dolor al pie de la Cruz. Su rostro refleja tristeza y fortaleza materna. Es el paso más importante del Martes Santo, acompañado con música sacra solemne.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">24 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">700 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera tallada y vestidura bordada en oro</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa del Martes Santo -->
+                <div class="mapa-section">
+                    <div class="mapa-header">
+                        <div class="mapa-info">
+                            <h3>Recorrido del Martes Santo</h3>
+                            <p>
+                                La procesión del Martes Santo sigue un recorrido tradicional que ha permanecido prácticamente inalterado durante siglos. Inicia en la Iglesia de San Francisco, atraviesa el corazón del centro histórico y retorna al mismo templo.
+                            </p>
+                        </div>
+                        <div class="mapa-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2.8</span>
+                                <span class="stat-label">Kilómetros</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3.5</span>
+                                <span class="stat-label">Horas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Calles</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mapa-container">
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d3986.1917699962496!2d-76.61088362527605!3d2.4430976570875163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x8e300310438eaac9%3A0x473fe8cc717e420f!2sIglesia%20de%20San%20Francisco%2C%20Cra.%209%20%234-29%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4433751!2d-76.6085971!4m5!1s0x8e300305549d061f%3A0xbf6f7babea98c6c4!2sCatedral%20Nuestra%20Se%C3%B1ora%20de%20La%20Asunci%C3%B3n%2C%20Cl.%205a%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4412333!2d-76.60656089999999!4m5!1s0x8e300310438eaac9%3A0x473fe8cc717e420f!2sIglesia%20de%20San%20Francisco%2C%20Cra.%209%20%234-29%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4433751!2d-76.6085971!5e0!3m2!1ses-419!2sco!4v1755772269519!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Mapa del Recorrido - Martes Santo</p>
+                            <p style="font-size: 12px; opacity: 0.7;">Aquí se integrará el mapa interactivo</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Puntos de Interés del Recorrido -->
+                    <div class="puntos-interes">
+                        <div class="punto-card">
+                            <div class="punto-title">Salida - Iglesia San Francisco</div>
+                            <div class="punto-time">8:00 PM</div>
+                            <div class="punto-description">Punto de inicio de la procesión. Los pasos salen en orden establecido desde 1566.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle del Cauca</div>
+                            <div class="punto-time">8:30 PM</div>
+                            <div class="punto-description">Primera calle principal del recorrido, con balcones coloniales decorados.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Plaza Mayor - Catedral</div>
+                            <div class="punto-time">9:15 PM</div>
+                            <div class="punto-description">Momento más solemne, bendición frente a la Catedral Basílica.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle Real</div>
+                            <div class="punto-time">10:00 PM</div>
+                            <div class="punto-description">Tramo con mayor concentración de público y casas coloniales.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Regreso - San Francisco</div>
+                            <div class="punto-time">11:30 PM</div>
+                            <div class="punto-description">Finalización de la procesión y recogida de los pasos.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MIÉRCOLES SANTO -->
+            <section id="miercoles" class="day-section">
+                
+                <!-- Day Header -->
+                <div class="day-header">
+                    <h2 class="day-title">Miércoles Santo</h2>
+                    <p class="day-subtitle">Procesión del Amo Jesús y la Virgen Dolorosa</p>
+                    <div class="day-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            8:00 PM - 12:00 AM
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            6 Pasos Procesionales
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                            122 Cargueros
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day Description -->
+                <div class="day-description">
+                    <h3 class="section-title">Sobre esta Procesión</h3>
+                    <p>
+                        El Miércoles Santo presenta la procesión más emotiva y conmovedora de toda la Semana Santa payanesa. Conocida como la procesión del "Amo Jesús", está dedicada a meditar sobre el amor incondicional de Cristo y el encuentro doloroso con su Madre. Esta jornada reúne las imágenes más veneradas y antiguas de la ciudad.
+                    </p>
+                    <p>
+                        Los seis pasos que conforman esta procesión narran desde el juicio de Pilatos hasta el calvario del Señor, culminando con el encuentro entre Jesús y María en el camino al Gólgota. La imagen del Amo Jesús, tallada en el siglo XVI, es considerada una de las más perfectas expresiones del arte sacro colonial en América.
+                    </p>
+                    <p>
+                        Esta procesión se caracteriza por la participación masiva de familias enteras que han mantenido viva la tradición durante generaciones, y por la extraordinaria devoción que despierta la imagen titular en todos los asistentes.
+                    </p>
+                </div>
+
+                <!-- Pasos del Miércoles Santo -->
+                <div class="pasos-container">
+                    <h3 class="section-title">Pasos Procesionales del Miércoles Santo</h3>
+                    <div class="pasos-grid">
+                        
+                        <div class="paso-card">
+                            <div class="paso-header">
+ <img src="{% static 'img/img_se/pasos_7.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                <div class="paso-number">1</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Flagelación</h4>
+                                <p class="paso-description">
+Representa a Jesús atado a la columna mientras es azotado por los verdugos romanos. El dramatismo de la escena muestra la violencia del suplicio y la resignación de Cristo.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">18 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">700 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_8.webp' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                  <div class="paso-number">2</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Ecce HomoLa </h4>
+                                <p class="paso-description">
+Muestra a Jesús presentado por Pilato al pueblo tras la flagelación, con corona de espinas y manto púrpura. La expresión del rostro transmite dolor y dignidad.                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">20 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">650 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_9.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                  <div class="paso-number">3</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">Jesús Nazareno con la Cruz a Cuestas</h4>
+                                <p class="paso-description">
+Representa a Cristo llevando la cruz camino al Calvario, escoltado por sayones. La imagen es una de las más veneradas del Miércoles Santo, acompañada por rezos y cantos tradicionales.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">20 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">750 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_10.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                  <div class="paso-number">4</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title"> El Encuentro</h4>
+                                <p class="paso-description">
+Paso que muestra el momento en que Jesús, cargando la cruz, se encuentra con su madre María en el camino al Gólgota. La composición destaca por la fuerza emocional entre las dos figuras.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">22 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">700 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera tallada y policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_11.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                  <div class="paso-number">5</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Señor de la Coronación</h4>
+                                <p class="paso-description">
+Representa la escena en la que Jesús recibe la corona de espinas. Los sayones lo rodean en actitud de burla, mientras Él soporta el tormento en silencio.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">18 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">680 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_12.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                     <div class="paso-number">6</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Virgen de la Esperanza</h4>
+                                <p class="paso-description">
+Imagen titular de la procesión del Miércoles Santo. La Virgen aparece de pie, vestida de verde y blanco, colores que simbolizan la esperanza y la fe en medio del dolor. Su rostro expresa serenidad y consuelo maternal.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">24 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">700 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera tallada y vestiduras bordadas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa del Miércoles Santo -->
+                <div class="mapa-section">
+                    <div class="mapa-header">
+                        <div class="mapa-info">
+                            <h3>Recorrido del Miércoles Santo</h3>
+                            <p>
+                                El recorrido del Miércoles Santo es el más extenso de toda la semana, atravesando prácticamente todo el centro histórico. Sale de la Iglesia de Santo Domingo y realiza un circuito completo que incluye las principales plazas y calles coloniales.
+                            </p>
+                        </div>
+                        <div class="mapa-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3.5</span>
+                                <span class="stat-label">Kilómetros</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4.0</span>
+                                <span class="stat-label">Horas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">16</span>
+                                <span class="stat-label">Calles</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mapa-container">
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m36!1m12!1m3!1d996.548991797857!2d-76.60628336246064!3d2.4416832717349912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m21!3e2!4m5!1s0x8e30030562103b71%3A0x685cc1b9b802d58!2sClaustro%20De%20Santo%20Domingo%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4417267!2d-76.6047488!4m3!3m2!1d2.4410146!2d-76.60515199999999!4m3!3m2!1d2.4415608!2d-76.6069327!4m5!1s0x8e30030562103b71%3A0x685cc1b9b802d58!2sClaustro%20De%20Santo%20Domingo%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4417267!2d-76.6047488!5e0!3m2!1ses-419!2sco!4v1755772600241!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Mapa del Recorrido - Miércoles Santo</p>
+                            <p style="font-size: 12px; opacity: 0.7;">Recorrido más extenso de la semana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="puntos-interes">
+                        <div class="punto-card">
+                            <div class="punto-title">Salida - Iglesia Santo Domingo</div>
+                            <div class="punto-time">8:00 PM</div>
+                            <div class="punto-description">Inicio desde el convento dominico, uno de los más antiguos de la ciudad.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Plaza de Caldas</div>
+                            <div class="punto-time">8:45 PM</div>
+                            <div class="punto-description">Primera parada oficial, bendición especial del Amo Jesús.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle Larga - Plaza Mayor</div>
+                            <div class="punto-time">9:30 PM</div>
+                            <div class="punto-description">Momento culminante frente a la Catedral, mayor concentración de fieles.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Barrio San Francisco</div>
+                            <div class="punto-time">10:15 PM</div>
+                            <div class="punto-description">Recorrido por las calles más tradicionales del centro histórico.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">El Callejón del Embudo</div>
+                            <div class="punto-time">11:00 PM</div>
+                            <div class="punto-description">Tramo más estrecho y pintoresco del recorrido.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Regreso - Santo Domingo</div>
+                            <div class="punto-time">12:00 AM</div>
+                            <div class="punto-description">Finalización en el punto de origen tras 4 horas de recorrido.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JUEVES SANTO -->
+            <section id="jueves" class="day-section">
+                <!-- Day Header -->
+                <div class="day-header">
+                    <h2 class="day-title">Jueves Santo</h2>
+                    <p class="day-subtitle">Procesión de la Pasión y Muerte de Nuestro Señor</p>
+                    <div class="day-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            8:00 PM - 1:00 AM
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            8 Pasos Procesionales
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                            48 Cargueros
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-description">
+                    <h3 class="section-title">Sobre esta Procesión</h3>
+                    <p>
+                        El Jueves Santo presenta la procesión más solemne y extensa de toda la Semana Santa payanesa. Dedicada a la Pasión completa de Cristo, desde la Última Cena hasta su muerte en la cruz, esta jornada reúne los ocho pasos más significativos que narran de manera cronológica los últimos momentos de la vida terrena de Jesús.
+                    </p>
+                    <p>
+                        Esta procesión se caracteriza por su duración de cinco horas y por incluir las imágenes más grandes y pesadas de toda la semana. El Cristo de la Veracruz, que cierra la procesión, es considerado una de las tallas más perfectas del arte colonial americano y requiere de más de 40 cargueros para su transporte.
+                    </p>
+                </div>
+
+                <!-- Solo un ejemplo de paso para el Jueves Santo -->
+                <div class="pasos-container">
+                    <h3 class="section-title">Pasos Procesionales del Jueves Santo</h3>
+                    <div class="pasos-grid">
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_13.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                 <div class="paso-number">1</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Crucifixión</h4>
+                                <p class="paso-description">
+Representa el momento central de la Pasión: Jesús clavado en la cruz, acompañado de los dos ladrones y custodiado por soldados romanos. La escena transmite dramatismo y recogimiento, siendo uno de los pasos más sobrecogedores de la Semana Santa payanesa.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">24 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">800 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Placeholder para más pasos -->
+                        <div class="paso-card" style="opacity: 0.7;">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_14.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                   <div class="paso-number">2</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Calvario</h4>
+                                <p class="paso-description">
+Paso que muestra a Cristo crucificado junto a la Virgen María, San Juan Evangelista y María Magdalena al pie de la cruz. Es una composición cargada de emotividad, considerada una de las obras maestras del arte religioso de Popayán. Su presencia en la procesión del Viernes Santo simboliza el culmen del sacrificio redentor.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">24 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">850 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Material:</span>
+                                        <span class="paso-detail-value">Madera policromada</span>
+                                    </div>
+                                </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa del Jueves Santo -->
+                <div class="mapa-section">
+                    <div class="mapa-header">
+                        <div class="mapa-info">
+                            <h3>Recorrido del Jueves Santo</h3>
+                            <p>
+                                El Jueves Santo presenta el recorrido más largo y complejo, que puede extenderse hasta 5 horas. Sale de la Iglesia de La Ermita y recorre prácticamente toda la ciudad histórica en un circuito que simboliza el Via Crucis completo.
+                            </p>
+                        </div>
+                        <div class="mapa-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">4.2</span>
+                                <span class="stat-label">Kilómetros</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5.0</span>
+                                <span class="stat-label">Horas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20</span>
+                                <span class="stat-label">Calles</span>
+                            </div>
+                               </div>
+                    </div>
+                    
+                    <div class="mapa-container">
+                        <div class="mapa-placeholder">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m38!1m12!1m3!1d3986.194751253035!2d-76.60744512527604!3d2.44209310709254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m23!3e2!4m5!1s0x8e300305bc631871%3A0xeff9e7336c0a4255!2sErmita%20de%20Jes%C3%BAs%20Nazareno%2C%20Cl%205%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4401525!2d-76.6028527!4m5!1s0x8e30033b77c3ec87%3A0x33ee2a06c47a4e76!2sPuente%20Del%20Humilladero%2C%20Cra%205%20%231-28%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.444023!2d-76.60508519999999!4m3!3m2!1d2.4415608!2d-76.6069327!4m5!1s0x8e300305bc631871%3A0xeff9e7336c0a4255!2sErmita%20de%20Jes%C3%BAs%20Nazareno%2C%20Cl%205%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4401525!2d-76.6028527!5e0!3m2!1ses-419!2sco!4v1755772716706!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Mapa del Recorrido - Jueves Santo</p>
+                            <p style="font-size: 12px; opacity: 0.7;">Recorrido más largo de la semana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="puntos-interes">
+                        <div class="punto-card">
+                            <div class="punto-title">Salida - Iglesia La Ermita</div>
+                            <div class="punto-time">8:00 PM</div>
+                            <div class="punto-description">Inicio desde el templo más antiguo, construido en 1546.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Puente del Humilladero</div>
+                            <div class="punto-time">8:30 PM</div>
+                            <div class="punto-description">Cruce simbólico del río Molino, tradición de más de 400 años.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Plaza Mayor</div>
+                            <div class="punto-time">10:00 PM</div>
+                            <div class="punto-description">Momento central de la procesión, mayor solemnidad.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle del Carozo</div>
+                            <div class="punto-time">11:30 PM</div>
+                            <div class="punto-description">Tramo más empinado, mayor esfuerzo de los cargueros.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Regreso - La Ermita</div>
+                            <div class="punto-time">1:00 AM</div>
+                            <div class="punto-description">Finalización después de 5 horas de recorrido.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VIERNES SANTO -->
+            <section id="viernes" class="day-section">
+                
+                <!-- Day Header -->
+                <div class="day-header">
+                    <h2 class="day-title">Viernes Santo</h2>
+                    <p class="day-subtitle">Procesión del Santo Entierro</p>
+                    <div class="day-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            7:00 PM - 11:00 PM
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            7 Pasos Procesionales
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+                            102 Cargueros
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day Description -->
+                <div class="day-description">
+                    <h3 class="section-title">Sobre esta Procesión</h3>
+                    <p>
+                        El Viernes Santo representa el momento más solemne y emotivo de toda la Semana Santa payanesa. La Procesión del Santo Entierro conmemora la muerte y sepultura de Cristo, siendo el día de mayor recogimiento y silencio en la ciudad. Esta procesión, conocida también como "del Silencio", se caracteriza por la ausencia total de música y por el profundo respeto que mantienen todos los asistentes.
+                    </p>
+                    <p>
+                        Los siete pasos que conforman esta procesión narran desde la crucifixión hasta el entierro de Jesús. El Cristo Yacente, que cierra la procesión dentro de una urna de cristal, es una de las tallas más veneradas y representa la culminación de toda la Semana Santa. Esta imagen, con movimiento en brazos y piernas, permite representar tanto la crucifixión como la deposición de la cruz.
+                    </p>
+                    <p>
+                        La procesión del Viernes Santo se distingue por su carácter fúnebre y por la participación de autoridades civiles y militares que rinden honores al Cristo muerto, convirtiendo este momento en una expresión única de fe popular y tradición cultural.
+                    </p>
+                </div>
+
+                <!-- Pasos del Viernes Santo -->
+                <div class="pasos-container">
+                    <h3 class="section-title">Pasos Procesionales del Viernes Santo</h3>
+                    <div class="pasos-grid">
+                        
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_15.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">      
+<div class="paso-number">1</div>                          
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Muerte</h4>
+                                <p class="paso-description">
+Representa la figura alegórica de la Muerte, vestida con túnica y portando símbolos fúnebres. Abre el cortejo recordando la inevitabilidad de la muerte terrenal frente al sacrificio de Cristo.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">16 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">500 kg aprox.</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_16.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                              
+                                <div class="paso-number">2</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">María Salomé</h4>
+                                <p class="paso-description">
+Figura de una de las mujeres que acompañó a Cristo hasta la crucifixión. Su expresión de dolor profundo evoca la fidelidad y devoción de las mujeres seguidoras de Jesús.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">12 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">350 kg aprox.</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_17.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                 
+                                <div class="paso-number">3</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">La Verónica</h4>
+                                <p class="paso-description">
+Paso que muestra a Verónica sosteniendo el lienzo con el que enjugó el rostro de Jesús en el camino al Calvario. La tradición asegura que en él quedó grabada la Santa Faz.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">14 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">400 kg aprox.</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_18.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy"> 
+                                <div class="paso-number">4</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Varón del Martillo</h4>
+                                <p class="paso-description">
+Figura alegórica de uno de los sayones encargados de ejecutar la crucifixión. Porta el martillo con el que se clavarían los clavos en la cruz. Es un paso simbólico de la violencia de la Pasión.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">12 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">300 kg aprox.</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_19.jpg' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy"> 
+                                <div class="paso-number">5</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Santo Cristo</h4>
+                                <p class="paso-description">
+Paso central del Viernes Santo, representa a Jesús ya crucificado. Es uno de los momentos más solemnes de la procesión y de toda la Semana Santa en Popayán.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVII, Quito</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">24 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">800 kg aprox.</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_20.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                 <div class="paso-number">6</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">El Descendimiento</h4>
+                                <p class="paso-description">
+Representa el momento en que Cristo es bajado de la cruz, asistido por José de Arimatea y Nicodemo, en presencia de la Virgen y discípulos. Es una de las escenas más dramáticas y conmovedoras.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">24 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">850 kg aprox.</span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- Mapa del Viernes Santo -->
+                <div class="mapa-section">
+                    <div class="mapa-header">
+                        <div class="mapa-info">
+                            <h3>Recorrido del Viernes Santo</h3>
+                            <p>
+                                La procesión del Viernes Santo sigue un recorrido de profundo significado simbólico. Sale de la Iglesia de San Agustín y recorre las calles en completo silencio, representando el camino al sepulcro y el duelo por la muerte de Cristo.
+                            </p>
+                        </div>
+                        <div class="mapa-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3.0</span>
+                                <span class="stat-label">Kilómetros</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">4.0</span>
+                                <span class="stat-label">Horas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">14</span>
+                                <span class="stat-label">Calles</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mapa-container">
+                        <div class="mapa-placeholder">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m38!1m12!1m3!1d498.27523958011557!2d-76.60693580989974!3d2.439677001586291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m23!3e2!4m5!1s0x8e30031b48914881%3A0xe36da6139c290913!2sIglesia%20San%20Agust%C3%ADn%2C%20Cra.%206%20%23762%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4394036999999997!2d-76.6068201!4m3!3m2!1d2.4415608!2d-76.6069327!4m5!1s0x8e30030ff9207c27%3A0xf76217f9f8464ebe!2sParque%20Caldas%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4418674!2d-76.60627389999999!4m5!1s0x8e30031b48914881%3A0xe36da6139c290913!2sIglesia%20San%20Agust%C3%ADn%2C%20Cra.%206%20%23762%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4394036999999997!2d-76.6068201!5e0!3m2!1ses-419!2sco!4v1755772856950!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Mapa del Recorrido - Viernes Santo</p>
+                            <p style="font-size: 12px; opacity: 0.7;">Procesión del Silencio</p>
+                        </div>
+                    </div>
+                    
+                    <div class="puntos-interes">
+                        <div class="punto-card">
+                            <div class="punto-title">Salida - Iglesia San Agustín</div>
+                            <div class="punto-time">7:00 PM</div>
+                            <div class="punto-description">Inicio desde el convento agustino, en absoluto silencio.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle de la Universidad</div>
+                            <div class="punto-time">7:45 PM</div>
+                            <div class="punto-description">Paso frente a la histórica Universidad del Cauca.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Plaza Mayor - Momento Solemne</div>
+                            <div class="punto-time">8:30 PM</div>
+                            <div class="punto-description">Honores militares al Santo Sepulcro, momento más emotivo.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle Real</div>
+                            <div class="punto-time">9:15 PM</div>
+                            <div class="punto-description">Recorrido por el centro comercial histórico.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Regreso - San Agustín</div>
+                            <div class="punto-time">11:00 PM</div>
+                            <div class="punto-description">Finalización con el recogimiento del Santo Sepulcro.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SÁBADO SANTO -->
+            <section id="sabado" class="day-section">
+                
+                <!-- Day Header -->
+                <div class="day-header">
+                    <h2 class="day-title">Sábado Santo</h2>
+                    <p class="day-subtitle">Procesión de la Resurrección</p>
+                    <div class="day-meta">
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            6:00 AM - 8:00 AM
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            4 Pasos Procesionales
+                        </div>
+                        <div class="meta-item">
+                            <svg class="meta-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                            80 Cargueros
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day Description -->
+                <div class="day-description">
+                    <h3 class="section-title">Sobre esta Procesión</h3>
+                    <p>
+                        El Sábado Santo cierra la Semana Santa payanesa con la Procesión de la Resurrección, un evento lleno de alegría y esperanza que contrasta completamente con el dolor de los días anteriores. Esta procesión matutina celebra el triunfo de Cristo sobre la muerte y marca el inicio del tiempo pascual.
+                    </p>
+                    <p>
+                        La procesión se caracteriza por el repique de campanas, música festiva y la participación masiva de familias con niños. Los cuatro pasos que la conforman narran desde la resurrección hasta la aparición a los discípulos, culminando con el Cristo Resucitado en todo su esplendor.
+                    </p>
+                    <p>
+                        Esta procesión representa la esperanza cristiana y la vida nueva. A diferencia de las procesiones nocturnas de la semana, se realiza al amanecer, simbolizando la luz que vence a las tinieblas y la vida que triunfa sobre la muerte.
+                    </p>
+                </div>
+
+                <!-- Pasos del Sábado Santo -->
+                <div class="pasos-container">
+                    <h3 class="section-title">Pasos Procesionales del Sábado Santo</h3>
+                    <div class="pasos-grid">
+                        
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_21.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                 <div class="paso-number">1</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">Cirio Pascual</h4>
+                                <p class="paso-description">
+Representa la luz de Cristo resucitado, signo de esperanza y vida eterna, encendido en la Vigilia Pascual.
+                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Tradición litúrgica incorporada en Popayán en el siglo XIX.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">12 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">400 kg aprox.</span>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_22.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                 <div class="paso-number">2</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">María Salomé</h4>
+                                <p class="paso-description">
+Una de las santas mujeres que acudió al sepulcro. Figura de fidelidad y devoción.       
+                         </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">18 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">600 kg aprox.</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Huerto:</span>
+                                        <span class="paso-detail-value">Flores naturales</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="paso-card">
+                            <div class="paso-header">
+<img src="{% static 'img/img_se/pasos_23.png' %}" alt="Popayán Tour Logo" class="paso-image" loading="lazy">                                 <div class="paso-number">2</div>
+                                <div class="paso-number">3</div>
+                            </div>
+                            <div class="paso-content">
+                                <h4 class="paso-title">María la Madre de Santiago</h4>
+                                <p class="paso-description">
+Mujer presente en el hallazgo del sepulcro vacío, símbolo de ternura y testimonio.                                </p>
+                                <div class="paso-details">
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Origen:</span>
+                                        <span class="paso-detail-value">Siglo XVIII, Popayán</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Cargueros:</span>
+                                        <span class="paso-detail-value">18 hombres</span>
+                                    </div>
+                                    <div class="paso-detail">
+                                        <span class="paso-detail-label">Peso:</span>
+                                        <span class="paso-detail-value">600 kg aprox.</span>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa del Sábado Santo -->
+                <div class="mapa-section">
+                    <div class="mapa-header">
+                        <div class="mapa-info">
+                            <h3>Recorrido del Sábado Santo</h3>
+                            <p>
+                                La procesión del Sábado Santo sigue un recorrido más corto y alegre. Sale de la Catedral Basílica al amanecer y recorre las principales calles del centro histórico, acompañada por el repique festivo de todas las campanas de la ciudad.
+                            </p>
+                        </div>
+                        <div class="mapa-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2.0</span>
+                                <span class="stat-label">Kilómetros</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2.0</span>
+                                <span class="stat-label">Horas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Calles</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mapa-container">
+                        <div class="mapa-placeholder">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m38!1m12!1m3!1d1185.1029570517421!2d-76.60695166810642!3d2.441903721488239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m23!3e2!4m5!1s0x8e300305549d061f%3A0xbf6f7babea98c6c4!2sCatedral%20Nuestra%20Se%C3%B1ora%20de%20La%20Asunci%C3%B3n%2C%20Cl.%205a%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4412333!2d-76.60656089999999!4m5!1s0x8e30030ff9207c27%3A0xf76217f9f8464ebe!2sParque%20Caldas%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4418674!2d-76.60627389999999!4m3!3m2!1d2.4427116!2d-76.607478!4m5!1s0x8e300305549d061f%3A0xbf6f7babea98c6c4!2sCatedral%20Nuestra%20Se%C3%B1ora%20de%20La%20Asunci%C3%B3n%2C%20Cl.%205a%2C%20Centro%2C%20Popay%C3%A1n%2C%20Cauca!3m2!1d2.4412333!2d-76.60656089999999!5e0!3m2!1ses-419!2sco!4v1755772950630!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Mapa del Recorrido - Sábado Santo</p>
+                            <p style="font-size: 12px; opacity: 0.7;">Procesión de la Alegría</p>
+                        </div>
+                    </div>
+                    
+                    <div class="puntos-interes">
+                        <div class="punto-card">
+                            <div class="punto-title">Salida - Catedral Basílica</div>
+                            <div class="punto-time">6:00 AM</div>
+                            <div class="punto-description">Inicio al amanecer desde el templo mayor de la ciudad.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Plaza Mayor - Celebración</div>
+                            <div class="punto-time">6:30 AM</div>
+                            <div class="punto-description">Momento de mayor alegría con repique de campanas.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Calle Real</div>
+                            <div class="punto-time">7:00 AM</div>
+                            <div class="punto-description">Recorrido festivo con participación de familias.</div>
+                        </div>
+                        <div class="punto-card">
+                            <div class="punto-title">Regreso - Catedral</div>
+                            <div class="punto-time">8:00 AM</div>
+                            <div class="punto-description">Finalización con Misa de Resurrección.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+  
+
+</body>
+</html>

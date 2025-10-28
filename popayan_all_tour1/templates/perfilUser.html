@@ -1,0 +1,209 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/perfilUser.css' %}">
+    <script src="{% static 'js/perfilUser.js' %}"></script>
+    <title>Editor de Usuario</title>
+    <link rel="shortcut icon" href="../static/img/home/imagen_2025-03-16_185953883-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+            <a href="#" class="logo-nav">
+                <img src="{% static 'img/home/logo.png' %}" alt="Popayán Tour Logo">
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'semanaSanta' %}">Semana santa</a></li>
+                <li><a href="">Sitios de interés</a></li>
+                <li><a href="">Historia</a></li>
+                <li><a href="{% url 'entretenimiento' %}">Entretenimiento</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="nav-icons">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="{% url 'perfilUser' %}" class="nav-icon"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container">
+        <div class="form-section">
+            <h2 class="section-title">Editar usuario</h2>
+            
+            <div class="form-grid">
+                <!-- Primera columna -->
+                <div class="form-column">
+                    <div class="form-group">
+                        <label>Correo electrónico</label>
+                        <input type="email" value="juan.perez82@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" value="Password2025">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nombre completo</label>
+                        <input type="text" value="Juan Esteban Pérez Rodríguez">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" value="1992-08-15">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <textarea placeholder="Calle 45 #12-34, Barrio El Prado, Popayán, Cauca"></textarea>
+                    </div>
+                </div>
+
+                <!-- Segunda columna -->
+                <div class="form-column">
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" value="312 456 7890">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Profesión</label>
+                        <input type="text" value="Gerente de Hotel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Identificación</label>
+                        <input type="text" value="1023 456 789">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select id="rolSelect" onchange="toggleTipoEstablecimiento()">
+                            <option value="usuario">Usuario</option>
+                            <option value="empresario" selected>Empresario</option>
+                            <option value="administrador">Administrador</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="tipoEstablecimientoGroup">
+                        <label>Tipo de establecimiento (Negocio)</label>
+                        <select>
+                            <option value="hotel" selected>Hotel</option>
+                            <option value="restaurante">Restaurante</option>
+                            <option value="agencia">Agencia de Viajes</option>
+                            <option value="tour">Tour Operador</option>
+                            <option value="transporte">Transporte</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tercera columna - Imagen de perfil -->
+                <div class="profile-section">
+                    <h3>Imagen de perfil</h3>
+                    <div class="profile-image-container">
+                        <div class="profile-image" id="profileImage">
+                            <div class="profile-icon">👤</div>
+                        </div>
+                    </div>
+                    <div class="upload-controls">
+                        <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                            Subir imagen
+                        </button>
+                        <button class="upload-icon" onclick="resetImage()">
+                            ⚙️
+                        </button>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                </div>
+            </div>
+            
+            <button class="save-btn">Aplicar cambios</button>
+        </div>
+
+        <div class="form-section">
+            <h2 class="section-title">Eliminar usuario</h2>
+            
+            <div class="delete-section">
+                <div class="delete-warning">
+                    ¿Estás seguro de que deseas eliminar este perfil de usuario? Esta acción es permanente y no se podrá deshacer. Todos los datos asociados al usuario serán eliminados de forma definitiva.
+                </div>
+                
+                <button class="delete-btn" onclick="confirmDelete()">
+                    <span class="warning-icon"></span>
+                    Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+   <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Logo primero -->
+            <div class="logo-section">
+                <div class="logo-footer">
+                    <img src="{% static 'img/home/logo_blanco.png' %}" alt="Logo Popayán Tour">
+                </div>
+                <div class="linea-horizontal"></div>
+            </div>
+
+            <!-- Contenido del footer -->
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Formación para el viajero</a></li>
+                        <li><a href="#">Puntos de información</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Acerca de</h3>
+                    <ul>
+                        <li><a href="#">¿Quiénes somos?</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li>Correo: <br>popayanalltour</li>
+                        <li>Línea gratuita: <br> 312 231 1230</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Redes Sociales</h3>
+                    <ul class="social-icons">
+                        <li><i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/popayanalltour/">@PopayanAllTour</a>
+                        </li>
+                        <li><i class="fab fa-facebook"></i>
+                            <a
+                                href="https://www.facebook.com/profile.php?id=61578069024241&mibextid=wwXIfr&mibextid=wwXIfr">Popayan
+                                AllTour</a>
+                        </li>
+                        <li><i class="fab fa-youtube"></i> @popayanAlltour5002</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Derechos -->
+            <div class="footer-bottom">
+                <p>&copy; PopayanAllTour | Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

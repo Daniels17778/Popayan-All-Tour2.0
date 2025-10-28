@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  color: white;
+  background-color: black;
+}
+/* Inicio nav */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+.navbar.scrolled{
+  background-color: #000000b7;
+  color: #fff;
+}
+.logo-nav img {
+  height: 70px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffffff;
+}
+
+.nav-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icon i {
+  font-size: 24px;
+  color: white;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+
+/* Fin nav */
+/* Hero Section */
+
+/* ================= HERO ================= */
+.hero-container1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../../img/hoteles/fondo.png') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 17vh;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+  
+}
+
+/* Efecto oscuro para el arco */
+.hero-container1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    
+}
+
+.hero-title {
+    font-family: 'Aboreto', cursive;
+    font-weight: 400;
+    font-size: clamp(8rem, 13vw, 20rem); /* más grande */
+    letter-spacing: 0.1em; /* agrega un poco de espacio entre letras */
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    
+    /* 🔥 Centrado vertical preciso */
+    transform: translateY(17vh);
+    top: 17vh; /* ajusta este valor para moverlo un poco más arriba o abajo */
+    
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Botones debajo del título */
+.navigation-buttons {
+    display: flex;
+    position: relative;
+    margin-top: 30vh;
+    z-index: 1;
+    gap: 0px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.nav-button {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 14px 28px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-button.active {
+    background: rgba(255,255,255,0.9);
+    color: #222;
+    font-weight: 600;
+}
+
+
+/* Inicio card */
+.padre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 30px; /* espacio entre los elementos */
+    max-width: 100%;
+    place-items: center;
+}
+@media (max-width: 768px) {
+    .padre {
+      grid-template-columns: repeat(2, 1fr); /* en tablet */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .padre {
+      grid-template-columns: repeat(1, 1fr); /* en móvil */
+    }
+  }
+
+
+
+.card {
+    
+    position: relative;
+    width: 350px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .card:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: #000;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  .cto {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 7px;
+    padding-left: 2px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .cto::before {
+    content: "\21DD";
+    font-size: 28px;
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    transform: translateX(100%);
+  }
+  
+  .cto:active {
+    transform: scale(0.9);
+  }
+  
+  .cto {
+    position: relative;
+    color: rgb(52, 52, 52);
+    padding-bottom: 10px;
+  }
+  
+  .cto::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #616161;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cto:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .card__content .card__title{
+    font-size: 22px;
+  }
+  .card__content .card__description{
+    font-size: 12px;
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #595959;
+    line-height: 1.4;
+  }
+  
+  /* fin card */
+
+
+/* Inicio boton Restaurantes */
+.boton{
+  padding: 70px;
+}
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 7px;
+    padding-left: 2px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .cta::before {
+    content: "\21DD";
+    font-size: 28px;
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    transform: translateX(100%);
+  }
+  
+  .cta:active {
+    transform: scale(0.9);
+  }
+  
+  .cta {
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+  }
+  
+  .cta::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .card__content .card__title{
+    font-size: 22px;
+  }
+  .card__content .card__description{
+    font-size: 12px;
+  }
+  
+  
+/* Fin boton Restaurantes */
+/* Inicio footer */
+.footer {
+  background-color: #0a0a0a;
+  background-image: url("../img/fondo_footer.png");
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  background-size: 85%;
+  color: white;
+  padding: 30px 0 20px; /* mas espacio arriba menos espacio abajo */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.955);
+  /* oscurecer si se necesita */
+  z-index: -1;
+}
+
+.footer-content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.footer-grid div {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-grid h3 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-grid ul li {
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+}
+
+.footer-grid ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer-grid ul li a:hover {
+  font-weight: bold
+}
+
+.social-icons i {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+.footer-section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s ease;
+  transform: scaleX(0);
+}
+
+.footer-section ul li a:hover{
+  font-weight: bold;
+  color: white
+}
+.footer-section ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.logo-section {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linea-horizontal {
+  position: absolute;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  top: 50%;
+}
+
+
+.logo-footer {
+  width: 160px;
+  height: 160px;
+  background: rgb(0, 0, 0);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgb(0, 0, 0);
+}
+
+.logo-footer img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 100%;
+}
+
+.linea-horizontal {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff; /* blanco con transparencia */
+  z-index: -1;
+}
+
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.contact-item {
+  margin-bottom: 15px;
+}
+
+.contact-item strong {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-item span {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+
+.social-icons li a:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-icons li i a {
+  transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+  font-weight: bold
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #cccccc;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.but-create{
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+}
+.botones-empresario a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.botones-empresario a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.botones-empresario a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.botones-empresario a:hover{
+  color: #ffffff;
+}
+
+.botones-empresario a:hover::after {
+  transform: scaleX(1);
+}
